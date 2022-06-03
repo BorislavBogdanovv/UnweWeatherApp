@@ -14,5 +14,14 @@ namespace UnweWeatherApp
         {
             InitializeComponent();
         }
+
+        string GenerateRequestUri(string endpoint)
+        {
+            string requestUri = endpoint;
+            requestUri += $"?q={_cityEntry.Text}";
+            requestUri += "&units=metric";
+            requestUri += $"&APPID={Constants.OpenWeatherMapAPIKey}";
+            return requestUri;
+        }
     }
 }

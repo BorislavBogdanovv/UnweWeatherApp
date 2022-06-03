@@ -8,7 +8,7 @@ namespace UnweWeatherApp
 {
     public class LongToDateTimeConverter : IValueConverter
     {
-        DateTime_time = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+        DateTime _time = new DateTime(1970, 1, 1, 0, 0, 0, 0);
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -10,7 +10,7 @@ namespace UnweWeatherApp
 {
     public class OpenWeatherService
     {
-        HttpClient_client;
+        HttpClient _client;
 
         public OpenWeatherService()
         {
@@ -23,9 +23,9 @@ namespace UnweWeatherApp
 
             try
             {
-                var response = await_client.GetAsync(query);
+                var response = await _client.GetAsync(query);
 
-                if (response.IsSuccesStatusCode)
+                if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
 
@@ -38,7 +38,7 @@ namespace UnweWeatherApp
                 Debug.WriteLine("\t\tERROR {0}", ex.Message);
             }
 
-            return WeatherData;
+            return weatherData;
         }
     }
 }
